@@ -1,5 +1,5 @@
 const express = require('express');
-//require('dotenv').config();
+require('dotenv').config();
 const path = require('path');
 const app = express();
 const connectDB = require('./db/db');
@@ -16,6 +16,7 @@ app.use(express.static(__dirname + '/public'));
 app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: 'layout' }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.hbs');
+
 
 app.use('/user', require('./routes/user'));
 app.use('/task', require('./routes/task'));
