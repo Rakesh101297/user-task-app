@@ -1,0 +1,31 @@
+<h2>Tasks</h2>
+
+<form class="ui form" action="/task/taskpost/" method="post">
+    <div class="field">
+        <label>User</label>
+        <select id="userfdb" name="userfdb">
+            {{#each use}}
+            <option value={{this}}>{{this}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="field">
+        <label>Task Name</label>
+        <input type="text" name="taskname" placeholder="Task Name">
+    </div>
+    <div class="field">
+        <label>Task Type</label>
+        <select id="tasktype" name="tasktype">
+            <option value="Done">Done</option>
+            <option value="Pending">Pending</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <button class="ui button" type="submit">Submit</button>
+    </div>
+
+
+
+</form>
